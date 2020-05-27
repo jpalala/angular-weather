@@ -7,17 +7,27 @@ import { AppRoutingModule } from './app-routing.module';
 import { AboutModule } from './about/about.module';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
-// import { MainNavComponent } from './main-nav/main-nav.component';
 import { HeaderComponent } from './header/header.component';
+import { MainNavComponent } from './main-nav/main-nav.component';
+
 import { FooterComponent } from './footer/footer.component';
 import { WeatherComponent } from './weather/weather.component';
+import { TodoComponent } from './todo/todo.component';
+import { TodosComponent } from './todos/todos.component';
+import { TodoItemComponent } from './todo-item/todo-item.component';
+import { AlertBarComponent } from './alert-bar/alert-bar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WeatherComponent,
     HeaderComponent,
-    FooterComponent
+    MainNavComponent,
+    FooterComponent,
+    TodoComponent,
+    TodosComponent,
+    TodoItemComponent,
+    AlertBarComponent
   ],
   imports: [
     BrowserModule,

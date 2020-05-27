@@ -1,0 +1,3 @@
+<input value="{{ todo.title }}" >
+<a (click)="updateTodoItem($event)" href="#" disabled=>Save</a>
+<a href="#" (click)="confirmDelete($event, {{ todo.uuid }})">&times;</a>

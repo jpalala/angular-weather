@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { WeatherComponent } from './weather/weather.component';
-import { AboutComponent } from './about/about.component';
+import { TodosComponent } from './todos/todos.component';
+import { TodoItemComponent } from './todo-item/todo-item.component';
 
 const routes = [
-  { path: '', component: WeatherComponent },
-  { path: 'about', component: AboutComponent }
+  { path: '', component: TodosComponent },
+  { path: 'todo/:id', component: TodoItemComponent }
 ];
 
 @NgModule({
