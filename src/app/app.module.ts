@@ -17,8 +17,8 @@ import { WeatherComponent } from './weather/weather.component';
 import { TodoComponent } from './todo/todo.component';
 import { TodosComponent } from './todos/todos.component';
 import { TodoItemComponent } from './todo-item/todo-item.component';
-import { AlertBarComponent } from './alert-bar/alert-bar.component';
 import { TodoInputComponent } from './todo-input/todo-input.component';
+import { ConfirmationComponent } from './confirmation/confirmation.component';
 
 @NgModule({
   declarations: [
@@ -30,8 +30,8 @@ import { TodoInputComponent } from './todo-input/todo-input.component';
     TodoComponent,
     TodosComponent,
     TodoItemComponent,
-    AlertBarComponent,
-    TodoInputComponent
+    TodoInputComponent,
+    ConfirmationComponent
   ],
   imports: [
     BrowserModule,
