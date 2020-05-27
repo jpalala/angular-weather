@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AboutModule } from './about/about.module';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { FormsModule } from '@angular/forms';
+
 import { environment } from '../environments/environment';
 import { HeaderComponent } from './header/header.component';
 import { MainNavComponent } from './main-nav/main-nav.component';
@@ -16,6 +18,7 @@ import { TodoComponent } from './todo/todo.component';
 import { TodosComponent } from './todos/todos.component';
 import { TodoItemComponent } from './todo-item/todo-item.component';
 import { AlertBarComponent } from './alert-bar/alert-bar.component';
+import { TodoInputComponent } from './todo-input/todo-input.component';
 
 @NgModule({
   declarations: [
@@ -27,13 +30,15 @@ import { AlertBarComponent } from './alert-bar/alert-bar.component';
     TodoComponent,
     TodosComponent,
     TodoItemComponent,
-    AlertBarComponent
+    AlertBarComponent,
+    TodoInputComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AboutModule,
     HttpClientModule,
+    FormsModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
