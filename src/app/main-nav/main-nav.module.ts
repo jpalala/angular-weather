@@ -1,14 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MainNavComponent } from './main-nav.component';
-
+//
 @NgModule({
-  declarations: [MainNavComponent],
+declarations: [],
   imports: [
     CommonModule
   ],
-  exports: [
-    MainNavComponent
-  ]
+  exports: [  ]
 })
 export class MainNavModule { }

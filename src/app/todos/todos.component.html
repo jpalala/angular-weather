@@ -1,8 +1,9 @@
-<app-confirmation *ngIf="checkConfirm"  [message]="Are you sure?"></app-confirmation>
-
+<app-confirmation *ngIf="checkConfirm"  [message]="message"></app-confirmation>
+<!-- Input form: -->
 <app-todo-input></app-todo-input>
-<ul>
+
+<ul *ngIf="todos.length >= 1">
   <li *ngFor="let todo of todos">
-    <app-todo-item></app-todo-item>
+    <app-todo-item>{{ todo.title }}</app-todo-item>
   </li>
 </ul>

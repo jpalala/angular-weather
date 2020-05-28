@@ -1,3 +1,3 @@
 {{ todo.title }}
-<a (click)="goToEdit(todo)" href="#" disabled>Edit</a>
-<a href="#" (confirm)="onConfirm(todo)" (click)="confirmDelete($event, {{ todo.uuid }})">&times;</a>
+<a (click)="editTodo($event)" href="#" disabled>Edit</a>
+<a href="#" (confirm)="onConfirm(todo)" (click)="confirmDelete($event, todo.id)">&times;</a>

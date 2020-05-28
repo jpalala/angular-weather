@@ -11,6 +11,7 @@ export class ConfirmationComponent implements OnInit {
 
   hide: boolean = false;
   @Input() title: string;
+  @Input() message: string;
 
   constructor(
     private _communication: CommunicationService,

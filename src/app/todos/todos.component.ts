@@ -13,7 +13,7 @@ import { CommunicationService } from '../communication.service';
 export class TodosComponent implements OnInit {
   todos: Array<Todo>;
   checkConfirm: boolean = false;
-  message: string;
+  message: string = 'Confirm?';
 
   @Output() confirm = new EventEmitter();
 
