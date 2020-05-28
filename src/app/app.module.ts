@@ -14,11 +14,12 @@ import { MainNavComponent } from './main-nav/main-nav.component';
 
 import { FooterComponent } from './footer/footer.component';
 import { WeatherComponent } from './weather/weather.component';
-import { TodoComponent } from './todo/todo.component';
+// import { TodoComponent } from './todo.component';
 import { TodosComponent } from './todos/todos.component';
 import { TodoItemComponent } from './todo-item/todo-item.component';
 import { TodoInputComponent } from './todo-input/todo-input.component';
 import { ConfirmationComponent } from './confirmation/confirmation.component';
+import { HomepageComponent } from './homepage/homepage.component';
 
 @NgModule({
   declarations: [
@@ -27,11 +28,11 @@ import { ConfirmationComponent } from './confirmation/confirmation.component';
     HeaderComponent,
     MainNavComponent,
     FooterComponent,
-    TodoComponent,
     TodosComponent,
     TodoItemComponent,
     TodoInputComponent,
-    ConfirmationComponent
+    ConfirmationComponent,
+    HomepageComponent
   ],
   imports: [
     BrowserModule,

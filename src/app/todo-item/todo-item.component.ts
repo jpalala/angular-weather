@@ -11,19 +11,20 @@ import { CommunicationService } from '../communication.service';
 })
 export class TodoItemComponent implements OnInit {
   todo: Todo;
+  title: string;
   // ?  private routeSub: Subscription;
   constructor(private route: ActivatedRoute,
     private _communicationService: CommunicationService,
     private _localStorageService: LocalStorageService) { }
 
   ngOnInit() {
-    this._communicationService.currentMessage.subscribe(message => this.message = message);
+    this._communicationService.currentMessage.subscribe(title => this.title = title);
     const todoId = this.route.snapshot.paramMap.get('id');
     this.todo = this._localStorageService.getTodo(todoId);
   }
 
   editTodo(todo: Todo) {
-      console.log(todo);
+      console.log("TODO: ", todo);
   }
 
 

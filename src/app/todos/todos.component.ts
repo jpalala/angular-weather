@@ -25,10 +25,10 @@ export class TodosComponent implements OnInit {
     this._communication.currentMessage.subscribe(message => this.message = message);
 
   }
-  
+
   // event to
-  onConfirm($event) {
+  onConfirm() {
     this.checkConfirm = true;
-    $event.
+    //$event.
   }
 }
