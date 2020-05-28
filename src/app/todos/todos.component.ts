@@ -1,7 +1,6 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter} from '@angular/core';
 import { Todo } from '../todo';
 import { LocalStorageService } from '../services/local-storage.service';
-import { EventEmitter } from 'protractor';
 import { CommunicationService } from '../communication.service';
 
 // import { TodoInputComponent } from '../todo-input/todo-input.component';
