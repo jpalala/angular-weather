@@ -15,10 +15,10 @@ export class LocalStorageService {
     localStorage.setItem(STORAGE_KEY, currentTodoList);
   }
 
-  getTodo(uuid: string) {
+  getTodo(id: string) {
     let currentTodoList = localStorage.get(STORAGE_KEY) || [];
     return currentTodoList.find((t) => {
-       t.id === uuid;
+       t.id === id;
     });
   }
 

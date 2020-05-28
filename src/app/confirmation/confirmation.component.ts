@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { ConfirmMessageService } from '../services/confirm-message.service';
+import { LocalStorageService } from '../services/local-storage.service';
+import { CommunicationService } from '../communication.service';
 
 @Component({
   selector: 'app-confirmation',
@@ -7,9 +10,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConfirmationComponent implements OnInit {
 
-  constructor() { }
+  hide: boolean = false;
+  @Input() message: string;
 
-  ngOnInit() {
+  constructor(
+    private _communication: CommunicationService,
+     private localStorageService: LocalStorageService
+  ) {
+    // 1) Initiale  a event listener/subscriber
+    // 2) Triggering the event to let the consuming component should continue or not
   }
 
+  ngOnInit() {
+    this._communication.currentMessage.subscribe(message => this.message = message);
+
+  }
+
+  handleYes(taskUUId: string) {
+    this.localStorageService.deleteTodo(taskUUId);
+  }
+
+  handleNo() {
+    let hide = true;
+  }
+
+  dismissAlert() {
+    let hide = true;
+  }
 }

@@ -3,22 +3,27 @@ import { Subscription } from 'rxjs/Subscription';
 import { Todo } from 'src/app/Todo';
 import { ActivatedRoute } from '@angular/router';
 import { LocalStorageService } from '../services/local-storage.service';
-
+import { CommunicationService } from '../communication.service';
 @Component({
   selector: 'app-todo-item',
   templateUrl: './todo-item.component.html',
   styleUrls: ['./todo-item.component.css']
 })
 export class TodoItemComponent implements OnInit {
-  @Input() todo: Todo;
+  todo: Todo;
   // ?  private routeSub: Subscription;
   constructor(private route: ActivatedRoute,
-    private localStorageService: LocalStorageService) { }
+    private _communicationService: CommunicationService,
+    private _localStorageService: LocalStorageService) { }
 
   ngOnInit() {
-    const uuid = this.route.snapshot.paramMap.get('uuid');
-    this.localStorageService.getTo(uuid);
+    this._communicationService.currentMessage.subscribe(message => this.message = message);
+    const todoId = this.route.snapshot.paramMap.get('id');
+    this.todo = this._localStorageService.getTodo(todoId);
+  }
 
+  editTodo(todo: Todo) {
+      console.log(todo);
   }
 
 
